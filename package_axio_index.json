@@ -29,33 +29,9 @@
             {
               "name": "Axio MS500"
             },
-            {
-              "name": "Adafruit Gemma 8MHz"
-            },
-            {
-              "name": "Adafruit Trinket 8MHz"
-            },
-            {
-              "name": "Adafruit Trinket 16MHz"
-            },
-            {
-              "name": "Pro Trinket 5V/16MHz (USB)"
-            },
-            {
-              "name": "Pro Trinket 3V/12MHz (USB)"
-            },
-            {
-              "name": "Pro Trinket 5V/16MHz (FTDI)"
-            },
-            {
-              "name": "Pro Trinket 3V/12MHz (FTDI)"
-            }
           ]
         },
       ],
-      "tools": [],
-      "email": "support@adafruit.com",
-      "name": "TeeOnArdu"
     }
   ]
 }

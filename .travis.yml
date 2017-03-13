@@ -5,7 +5,7 @@ before_install:
 install:
   - arduino --install-library "Ethernet2"
 script:
-  - build_main_platforms
+  - build_platforms axio
 notifications:
   email:
     on_success: change

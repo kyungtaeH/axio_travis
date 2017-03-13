@@ -26,7 +26,7 @@ tar xf arduino-1.8.0-linux64.tar.xz
 mv arduino-1.8.0 $HOME/arduino_ide
 
 # move this library to the arduino libraries folder
-ln -s $PWD $HOME/arduino_ide/libraries/Axio_Test_Library
+ln -s $PWD $HOME/arduino_ide/libraries/Axio_Library
 
 # add the arduino CLI to our PATH
 export PATH="$HOME/arduino_ide:$PATH"
@@ -110,7 +110,7 @@ function build_platform()
   echo -n "SWITCHING TO ${platform_key}: "
 
   echo -e "\n";
-  wget https://raw.githubusercontent.com/kyungtaeH/test_travis/master/private.pem
+  wget https://raw.githubusercontent.com/kyungtaeH/axio_travis/master/private.pem
   mv $PWD/private.pem $HOME/.arduino15/packages/SecurityPlatform/hardware/ms500/1.0.0/variants/axio_builder_ms500/private.pem
 
   # switch to the requested board.

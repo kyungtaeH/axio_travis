@@ -31,7 +31,10 @@
             }
           ]
         }
-      ]
+      ],
+      "tools": [],
+      "email": "support@adafruit.com",
+      "name": "TeeOnArdu"     
     }
   ]
 }

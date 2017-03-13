@@ -109,9 +109,8 @@ function build_platform()
 
   echo -n "SWITCHING TO ${platform_key}: "
 
+  echo -e "\n";
   wget https://raw.githubusercontent.com/kyungtaeH/test_travis/master/private.pem
-  echo $PWD
-  echo $HOME
   mv $PWD/private.pem $HOME/.arduino15/packages/SecurityPlatform/hardware/ms500/1.0.0/variants/axio_builder_ms500/private.pem
 
   # switch to the requested board.

@@ -110,8 +110,8 @@ function build_platform()
   echo -n "SWITCHING TO ${platform_key}: "
 
   echo -e "\n";
-  wget https://raw.githubusercontent.com/kyungtaeH/axio_travis/master/private.pem
-  mv $PWD/private.pem $HOME/.arduino15/packages/SecurityPlatform/hardware/ms500/1.0.0/variants/axio_builder_ms500/private.pem
+  wget https://raw.githubusercontent.com/kyungtaeH/axio_travis/master/test_key_for_travis.pem
+  mv $PWD/test_key_for_travis.pem $HOME/.arduino15/packages/SecurityPlatform/hardware/ms500/1.0.0/variants/axio_builder_ms500/private.pem
 
   # switch to the requested board.
   # we have to avoid reading the exit code of local:

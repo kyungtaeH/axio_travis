@@ -26,7 +26,14 @@ tar xf arduino-1.8.0-linux64.tar.xz
 mv arduino-1.8.0 $HOME/arduino_ide
 
 # move this library to the arduino libraries folder
-ln -s $PWD $HOME/arduino_ide/libraries/Axio_Library
+if [[ "$PWD" == *Arduino_Ethernet_for_Axio ]] 
+then 
+  echo -e "!!! Delete default Ethernet library to test Arduino_Ethernet_for_Axio.";
+  rm -rf $HOME/arduino_ide/libraries/Ethernet
+  ln -s $PWD $HOME/arduino_ide/libraries/Ethernet
+else
+  ln -s $PWD $HOME/arduino_ide/libraries/Axio_Library
+fi
 
 # add the arduino CLI to our PATH
 export PATH="$HOME/arduino_ide:$PATH"
@@ -106,12 +113,10 @@ function build_platform()
   fi
 
   echo -e "\n########################################################################";
-
-  echo -n "SWITCHING TO ${platform_key}: "
-
-  echo -e "\n";
   wget https://raw.githubusercontent.com/kyungtaeH/axio_travis/master/test_key_for_travis.pem
   mv $PWD/test_key_for_travis.pem $HOME/.arduino15/packages/SecurityPlatform/hardware/ms500/1.0.0/variants/axio_builder_ms500/private.pem
+
+  echo -n "SWITCHING TO ${platform_key}: "
 
   # switch to the requested board.
   # we have to avoid reading the exit code of local:
